@@ -1,0 +1,11 @@
+---
+import { Image } from "astro:assets";
+import hero from "../assets/images/hero.webp";
+---
+
+<section class="relative w-full h-[85vh] overflow-hidden border-b-40 border-tertiary-900">
+  <Image src={hero} alt="Højskole i udlandet" class="absolute inset-0 w-full h-full object-cover" style="object-position: center 35%;" />
+  <div class="relative container mx-auto h-full flex items-end pb-60 md:pb-40 lg:pb-20">
+    <p class="text-primary-900 text-l md:text-xl lg:text-3xl">Eventyrlige højskoleophold i udlandet for unge.</p>
+  </div>
+</section>

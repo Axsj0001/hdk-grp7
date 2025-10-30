@@ -1,0 +1,49 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+---
+
+<div class="p-7 sm:p-10 mt-10">
+  <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-0 items-stretch">
+    <!-- Venstre kolonne -->
+    <div class="flex flex-col justify-center lg:pl-16 lg:pr-10">
+      <Heading htmlheading="h2" size="large">VI GØR EN FORSKEL</Heading>
+
+      <Text teksttype="brødtekst" class="mt-4"> Vi tror på at alle kan gøre en forskel - selv en højskole fra Danmark. Vi støtter derfor Verdens Skoves arbejde med bevarelse og bæredygtig brug af verdens skove. Vi har allerede fredet 106.785 m2 regnskov. Det er vi stolte af i HÖJSKOLENDK. </Text>
+      <div class="mt-10">
+        <Heading htmlheading="h3" size="large" class="mt-8">VORES MÆRKESAGER</Heading>
+      </div>
+      <div class="grid grid-cols-2 gap-6 mt-6">
+        <div class="flex flex-col items-center text-center text-xs">
+          <Text teksttype="brødtekst" class="font-semibold">TREES FOR THE FUTURE</Text>
+          <img class="mb-5" src="/src/assets/images/tree-for-future.svg" alt="Tree image" />
+        </div>
+
+        <div class="flex flex-col items-center text-center text-xs">
+          <Text teksttype="brødtekst" class="font-semibold">VERDENS SKOVE</Text>
+          <img class="mt-2" src="/src/assets/images/verdens-skov.svg" alt="Skov" />
+        </div>
+
+        <div class="flex flex-col items-center text-center text-xs">
+          <Text teksttype="brødtekst" class="font-semibold">WORLD ANIMAL PROTECTION</Text>
+          <img class="mt-2" src="/src/assets/images/World-animal-protection.svg" alt="zebra" />
+        </div>
+
+        <div class="flex flex-col items-center text-center text-xs">
+          <Text teksttype="brødtekst" class="font-semibold">CO2 NEUTRALT WEBSITE</Text>
+          <img class="mt-2" src="/src/assets/images/Co2-neutralt-website.svg" alt="Co2" />
+        </div>
+      </div>
+
+      <div class="flex justify-end mt-10 md:mt-20">
+        <Button variant="primary" size="small">LÆS MERE</Button>
+      </div>
+    </div>
+
+    <!-- Højre kolonne -->
+    <div class="mt-10 lg:mt-0 lg:ml-auto lg:-mr-10 sm:-mr-7">
+      <img src="/src/assets/images/Verdens_skove-billede.svg" alt="Billede af skoven" class="w-full h-full object-cover lg:rounded-none" />
+    </div>
+  </div>
+</div>

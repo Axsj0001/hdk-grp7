@@ -1,0 +1,24 @@
+---
+import BlogCard from "../components/BlogCard.astro";
+import Button from "../components/Button.astro";
+import Heading from "../components/Heading.astro";
+import { Image } from "astro:assets";
+import blog_1 from "../assets/images/blog_1.webp";
+import blog_2 from "../assets/images/blog_2.webp";
+import blog_3 from "../assets/images/blog_3.webp";
+---
+
+<section class="mb-20">
+  <section class="p-7 sm:p-10">
+    <Heading htmlheading="h2" size="large">BLOG</Heading>
+  </section>
+  <section class="md:grid md:grid-cols-3 p-7 sm:p-10">
+    <BlogCard src={blog_1} tekst="Hvis du skal ha’ dig et (eller flere) sabbatår, drømmer du sikkert om at det bliver verdens fedeste år. For lige nøjagtigt dig – og det forstår vi godt. Men…" />
+    <BlogCard src={blog_2} tekst="Hvordan kan det være at flere mennesker end nogensinde oplever stress, angst, depression, ensomhed, m.v. når vi lever i en tid med mere velstand, flere muligheder og et højere uddannelsesniveau…" />
+    <BlogCard src={blog_3} tekst="For 11 år siden tog jeg de første skridt for at realisere en drøm. En drøm om at skabe et arbejdsliv med dyb mening, fyldt med passion og livsglæde. Et…" />
+  </section>
+
+  <div class="flex justify-end md:-mt-12 pr-17 md:pr-20 pb-12">
+    <Button variant="primary" size="small">SE FLERE BLOGS</Button>
+  </div>
+</section>

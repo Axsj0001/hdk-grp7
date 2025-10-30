@@ -1,0 +1,26 @@
+---
+import Button from "../components/Button.astro";
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+---
+
+<section class="sm:grid sm:grid-cols-2">
+  <div class="">
+    <div class="aspect-square overflow-hidden">
+      <video autoplay muted loop playsinline class="w-full h-full object-cover" style="object-position: 50% 80%;">
+        <source src="/leo-skyi-dupe.mov" type="video/mp4" />
+        Din browser understøtter ikke video-tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="p-7 sm:p-10">
+    <Heading htmlheading="h2" size="large">DIT LIVS EVENTYR</Heading>
+    <Text teksttype="brødtekst">HÖJSKOLENDK er en dansk højskole for unge i alderen ca. 18-30 år. Vi brænder for oplevelser, fællesskab og mødet med nye mennesker og kulturer; derfor laver vi eventyrlige højskoleophold i udlandet.</Text>
+    <Text teksttype="brødtekst">HÖJSKOLENDK er noget for dig, hvis du vil på højskole i udlandet og er vild med højskolefællesskab, vil med på et fantastisk rejseeventyr, glæder dig til at lære om fremmede kulturer, vil rejse med rygsæk, drømmer om en fed grupperejse med andre skønne unge, vil opleve et stærkt sammenhold og ønsker inspirerende og meningsfuld undervisning. Du er sikker på en tryg rejseoplevelse da vi er medlem af Rejsegarantifonden.</Text>
+    <Text teksttype="brødtekst">Vi glæder os til at lære dig at kende!</Text>
+    <div class="flex justify-end">
+      <Button variant="primary" size="small">Hold mig opdateret</Button>
+    </div>
+  </div>
+</section>

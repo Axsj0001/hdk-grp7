@@ -1,7 +1,120 @@
 ---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
 ---
-<footer class="bg-primary-500 text-white">
-    <div class="container mx-auto p-4">
-        <p>&copy; 2025</p>
+
+<footer class="bg-primary-900 text-secondary-900">
+  <!-- vores samarbejde -->
+  <section class="bg-secondary-900 text-primary-900 p-7 sm:p-10">
+    <!-- Wrapper der styrer layout -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between md:gap-16 text-center md:text-left">
+      <!-- Overskrift -->
+      <Heading htmlheading="h2" size="large" class="whitespace-nowrap"> VORES SAMARBEJDE </Heading>
+
+      <!-- Logoer -->
+      <div class="flex flex-wrap justify-center md:justify-between items-center gap-6 md:gap-10">
+        <img src="/src/assets/images/rejsegaranti.svg" alt="Rejsegaranti" class="h-12 object-contain" />
+        <img src="/src/assets/images/gouda.svg" alt="Gouda" class="h-12 object-contain" />
+        <img src="/src/assets/images/jysk.svg" alt="Jysk" class="h-12 object-contain" />
+        <img src="/src/assets/images/co2.svg" alt="CO2" class="h-12 object-contain" />
+      </div>
     </div>
+  </section>
+
+  <!-- billede + tekst (højskole i udlandet) -->
+  <section class="sm:grid sm:grid-cols-2">
+    <div>
+      <img src="/src/assets/images/footer_img.webp" alt="skov billede" />
+    </div>
+    <div class="p-7 sm:p-10">
+      <Heading htmlheading="h2" size="large">HØJSKOLE I UDLANDET</Heading>
+
+      <Text teksttype="brødtekst">
+        <span class="font-semibold decoration-primary-500">Højskole i...</span>
+      </Text>
+
+      <Text teksttype="brødtekst">Maldiverne, Sri Lanka, Bali, Gili Islands, Japan & Australien</Text>
+      <Text teksttype="brødtekst">Australien, New Zealand, Vietnam, Bali, Gili Islands & Lombok</Text>
+      <Text teksttype="brødtekst">Brasilien, Colombia, Costa Rica & Mexico</Text>
+      <Text teksttype="brødtekst">Costa Rica, Mexico & Colombia</Text>
+      <Text teksttype="brødtekst">Indien, Nepal, Thailand, Vietnam & Sri Lanka</Text>
+      <Text teksttype="brødtekst">Hawaii, Australien, Japan, Bali & Gili Islands</Text>
+      <Text teksttype="brødtekst">Maldiverne, Sri Lanka, Bali & Gili Islands</Text>
+      <Text teksttype="brødtekst">Brasilien, Bolivia, Colombia, Ecuador, Peru & Argentina</Text>
+      <Text teksttype="brødtekst">Australien, Japan, Bali & Gili Islands</Text>
+
+      <Text teksttype="brødtekst">
+        <span class="font-semibold decoration-primary-500">Sommerhøjskole i...</span>
+      </Text>
+
+      <Text teksttype="brødtekst">Bali, Gili Islands & Lombok</Text>
+      <Text teksttype="brødtekst">Japan</Text>
+    </div>
+  </section>
+
+  <!-- orange sektion -->
+  <section class="bg-tertiary-900 text-primary-900 p-7 sm:p-10 flex flex-col md:flex-row gap-8 md:gap-50 lg:gap-75 -mt-4">
+    <div>
+      <Heading htmlheading="h2" size="large">HØJSKOLENDK</Heading>
+      <Text teksttype="brødtekst">Rosenørns Allé 31, 1970 Frederiksberg, Danmark</Text>
+      <Text teksttype="brødtekst">Telefon: 7027 9007</Text>
+      <Text teksttype="brødtekst">Mandag til Fredag — Kl. 10.00-16.00</Text>
+      <Text teksttype="brødtekst">Mail: info@hojskolendk.dk</Text>
+    </div>
+
+    <div>
+      <Heading htmlheading="h2" size="large">GODT AT VIDE</Heading>
+      <div class="grid grid-cols-2 gap-2 md:gap-10">
+        <div>
+          <Text teksttype="brødtekst">FAQ</Text>
+          <Text teksttype="brødtekst">Job</Text>
+          <Text teksttype="brødtekst">Bæredygtighed</Text>
+          <Text teksttype="brødtekst">Rejsegarantifonden</Text>
+        </div>
+        <div>
+          <Text teksttype="brødtekst">Fra tilmelding til afrejse</Text>
+          <Text teksttype="brødtekst">Generelle bestemmelser</Text>
+          <Text teksttype="brødtekst">Grupperejser for unge</Text>
+          <Text teksttype="brødtekst">Rejs i sabbatår</Text>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- banner -->
+  <section class="whitespace-nowrap overflow-x-hidden bg-primary-900 text-tertiary-900 py-4 md:py-8">
+    <div class="inline-block animate-infinite-scroll whitespace-nowrap font-heading text-7xl md:text-8xl lg:text-9xl [&_span]:mx-6">
+      <span>FÆLLESKAB</span>
+      <span>EVENTYR</span>
+      <span>REJSE</span>
+      <span>KULTUR</span>
+    </div>
+    <div class="inline-block animate-infinite-scroll whitespace-nowrap font-heading text-7xl md:text-8xl lg:text-9xl [&_span]:mx-6" aria-hidden="true">
+      <span>FÆLLESKAB</span>
+      <span>EVENTYR</span>
+      <span>REJSE</span>
+      <span>KULTUR</span>
+    </div>
+    <div class="inline-block animate-infinite-scroll whitespace-nowrap font-heading text-7xl md:text-8xl lg:text-9xl [&_span]:mx-6" aria-hidden="true">
+      <span>FÆLLESKAB</span>
+      <span>EVENTYR</span>
+      <span>REJSE</span>
+      <span>KULTUR</span>
+    </div>
+    <div class="inline-block animate-infinite-scroll whitespace-nowrap font-heading text-7xl md:text-8xl lg:text-9xl [&_span]:mx-6" aria-hidden="true">
+      <span>FÆLLESKAB</span>
+      <span>EVENTYR</span>
+      <span>REJSE</span>
+      <span>KULTUR</span>
+    </div>
+  </section>
+
+  <!-- sidste lille sektion -->
+  <section class="bg-primary-900 text-tertiary-900">
+    <div class="flex flex-row text-center justify-between font-p text-xs md:text-sm lg:text-base md:p-1">
+      <p>HÖJSKOLENDK er medlem af Rejsegarantifonden.</p>
+      <p>Handelsbetingelser / Cookiepolitik / Data- & Privatlivspolitik</p>
+      <p>Copyright © HÖJSKOLENDK 2022 • CVR 32491162</p>
+    </div>
+  </section>
 </footer>

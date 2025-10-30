@@ -1,0 +1,31 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+---
+
+<!-- infosektion -->
+<section class="grid grid-cols-1 md:grid-cols-2 mt-50 md:mt-85">
+  <div class="bg-secondary-900 text-primary-900 p-7 sm:p-10">
+    <Heading htmlheading="h2" size="large">INFOMØDE</Heading>
+    <Text teksttype="brødtekst">Kig forbi et af vores hyggelige infomøder i København, Aarhus eller online - vi glæder os til at møde dig!</Text>
+  </div>
+  <div class="bg-primary-900 text-secondary-900 p-7 sm:p-10">
+    <div class="mb-2 md:mb-4">
+      <Heading htmlheading="h2" size="large">ONLINE INFOMØDE</Heading>
+      <Text teksttype="brødtekst">12. November 2025 17-19</Text>
+      <Text teksttype="brødtekst">10. December 2025 17-19</Text>
+    </div>
+    <div class="mb-2 md:mb-4">
+      <Heading htmlheading="h2" size="large">KØBENHAVN</Heading>
+      <Text teksttype="brødtekst">18. November 2025 17-19</Text>
+    </div>
+    <div class="mb-2 md:mb-4">
+      <Heading htmlheading="h2" size="large">AARHUS</Heading>
+      <Text teksttype="brødtekst">6. November 2025 17-19</Text>
+    </div>
+    <div class="flex justify-end">
+      <Button variant="primary" size="small">LÆS MERE</Button>
+    </div>
+  </div>
+</section>

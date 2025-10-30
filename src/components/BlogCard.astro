@@ -1,0 +1,15 @@
+---
+const { src, tekst } = Astro.props;
+import Text from "../components/Text.astro";
+import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import pil from "../assets/images/pil_orange.svg";
+---
+
+<section class="flex flex-col items-center p-7 sm:p-10 -mt-20">
+  <Image src={src} alt="blog" class="h-100 w-auto mb-4" />
+  <Text teksttype="brødtekst">{tekst} </Text>
+  <div class="self-start mb-4">
+    <Image src={pil} alt="pil" class="w-auto" />
+  </div>
+</section>

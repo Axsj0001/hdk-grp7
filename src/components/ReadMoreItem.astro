@@ -1,0 +1,46 @@
+---
+const { title, text } = Astro.props;
+import Text from "../components/Text.astro";
+import Heading from "../components/Heading.astro";
+import { Image } from "astro:assets";
+import pil from "../assets/images/whitearrow.svg";
+---
+
+<article>
+  <button data-accordion-button class="w-full py-[18px] text-left outline-none hover:bg-[#FC7645] transition duration-400 flex justify-between cursor-pointer bg-[var(--accent1)]">
+    <Heading htmlheading="h3" size="medium">{title}</Heading>
+    <Image class="ml-2 transition-transform duration-200" src={pil} alt="Pil der peger nedad" />
+  </button>
+
+  <div class="hidden pt-[14px] pb-[20px] bg-[var(--accent1)] overflow-hidden border-t-2 border-b-2 border-primary-900">
+    <Text set:html={text} />
+  </div>
+</article>
+
+<script>
+  const buttons = document.querySelectorAll("[data-accordion-button]");
+
+  buttons.forEach((button) => button.addEventListener("click", onClick));
+
+  function onClick(event) {
+    const button = event.currentTarget;
+    const panel = button.nextElementSibling;
+    // support either inline <svg> or <img> rendered by Astro Image
+    const icon = button.querySelector("svg, img");
+
+    if (!panel) return;
+
+    const isHidden = panel.classList.contains("hidden");
+
+    if (isHidden) {
+      panel.classList.remove("hidden");
+      // rotate icon (works for <img> and inline <svg> via CSS rotate)
+      if (icon) icon.classList.add("rotate-180");
+      button.classList.add("bg-[#ead381]");
+    } else {
+      panel.classList.add("hidden");
+      if (icon) icon.classList.remove("rotate-180");
+      button.classList.remove("bg-[#ead381]");
+    }
+  }
+</script>

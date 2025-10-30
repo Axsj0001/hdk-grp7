@@ -1,0 +1,22 @@
+---
+const { src, destinationer, font, stylingclasses = "" } = Astro.props;
+import { Image } from "astro:assets";
+import rejse1 from "../assets/images/rejse1.webp";
+import rejse2 from "../assets/images/rejse2.webp";
+import rejse3 from "../assets/images/rejse3.webp";
+import rejse4 from "../assets/images/rejse4.webp";
+import rejse5 from "../assets/images/rejse5.webp";
+import rejse6 from "../assets/images/rejse6.webp";
+import rejse7 from "../assets/images/rejse7.webp";
+import rejse8 from "../assets/images/rejse8.webp";
+import rejse9 from "../assets/images/rejse9.webp";
+---
+
+<article class={`relative aspect-[4/5] group overflow-hidden ${stylingclasses}`}>
+  <Image src={src} alt=" Rejsedestination" class="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-110 duration-300 ease-in-out" />
+  <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300 ease-in-out"></div>
+  <div class="absolute inset-0 flex items-center justify-center p-6">
+    <!-- render html inside the destinationer prop (allows <br/> to create line breaks) -->
+    <p class={`text-primary-900 ${font} uppercase text-center text-3xl lg:text-5xl`} set:html={destinationer} />
+  </div>
+</article>

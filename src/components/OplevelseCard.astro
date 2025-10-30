@@ -1,0 +1,40 @@
+---
+import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
+const { src, text, text2 } = Astro.props;
+---
+
+<div class="Card relative bg-tertiary-900 overflow-hidden w-[300px] h-[330px] cursor-pointer">
+  <!-- Billedet -->
+  <image src={src} alt="Card billede 1" class="w-full h-[250px] object-cover class= card-image w-full h-[250px] object-cover transition-all duration-500" />
+
+  <!-- Indhold (overskrift og brødtekst) -->
+  <div class="p-4 relative z-10">
+    <h3 class="title text-primary-900 text-lg font-semibold transition-opacity duration-300">{text}</h3>
+  </div>
+
+  <!-- Overlay med brødtekst -->
+  <div class="overlay absolute inset-0 bg-tertiary-900 flex items-center justify-center opacity-0 transition-opacity duration-500">
+    <p class="text-white text-xs px-6">{text2}</p>
+  </div>
+</div>
+
+<style>
+  .Card {
+    max-width: 300px;
+    position: relative;
+  }
+
+  /* Hover-effekter */
+  .Card:hover .card-image {
+    opacity: 0;
+  }
+
+  .Card:hover .title {
+    opacity: 0;
+  }
+
+  .Card:hover .overlay {
+    opacity: 1;
+  }
+</style>
